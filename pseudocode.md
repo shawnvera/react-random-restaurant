@@ -48,18 +48,31 @@ State:
 
 
 INIT load into the splash menu page (menu may change depending on the time of day?)
+
 RENDER the restaurant name and location will show at the top of the page
+
 There will be a organism at the top of the page with the information about the restaurant and the NAVBAR
+
 Restaurant name is an atom as well as the location
+
 Restaurant and location together is a molecule?
+
 The menu items will display under the NAVBAR 
+
 The menu will contain at least 15 items
+
 Each item will have it's own price
+
 Maybe each item could have it's own emoji?
+
 Each item will be it's own molecule with bootstrap styling (maybe a card?)
+
 Background color of the menu should be a less saturated color
+
 Maybe chroma colors?
+
 Use adobe colors to select color pallette
+
 Include pictures on the page?
 
 END
@@ -78,12 +91,18 @@ Functions:
 **OOP**
 
 menu = {
+
     menuSections = {
+
         appetizers = [],
+ 
         lunch = [],
+ 
         dinner = []
+ 
     }
 }
+
 
 **React JS**
 
