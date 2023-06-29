@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function NavBar() {
+export default function NavBar(props) {
     return (
         <>
+        {props.name}
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="./index.js">Lex.Eat.with(friends)</a>
