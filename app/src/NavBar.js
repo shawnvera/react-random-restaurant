@@ -14,13 +14,13 @@ export default function NavBar(props) {
                                 <a className="nav-link active" aria-current="page" href="./index.js">Home</a>
                             </li> <br />
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Lunch</a>
+                                <a className="nav-link" href="./index.js">Lunch</a>
                             </li> <br />
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Dinner</a>
+                                <a className="nav-link" href="./index.js">Dinner</a>
                             </li> <br />
                             <li className="nav-item">
-                                <a className="nav-link disabled">About Us</a>
+                                <a className="nav-link" href="./index.js">About Us</a>
                             </li><br />
                         </ul>
                     </div>
