@@ -8,43 +8,49 @@ export default function Menu(props) {
     let menuArr = Object.entries(menu);
 
     useEffect(() => {
-        setMenu(getData());
+        const fetchData = async () => {
+            const data = await getData();
+            setMenu(data);
+        }
+        fetchData();
+        return () => {
+
+        }
     }, [])
 
     function handleClick() {
-
+      
     }
 
 
     return (
         <>
             <div className="container-fluid">
-
                 <div className="row">
+
 
 
                     {
                         menu.length > 0 ?
                             menu.map((item, index) => {
-
-                                <div className="col-4">
-                                    <div className="card">
-
-                                        <div className="card-body">
-                                            <h5 className="card-title">{item.title}</h5>
-                                            <p className="card-text">{item.title}</p>
-                                            <button onClick={handleClick} className="btn btn-primary"></button>
+                                return (
+                                    <>
+                                        <div className="col-xs-4">
+                                            <h5 className="card-title">{item.title} ${item.price}</h5>
+                                            <p className="card-text">{item.description}</p>
+                                            <button onClick={handleClick} className="btn btn-primary">Add to cart</button>
                                         </div>
-                                    </div>
-                                </div>
-                            })
-                        : <p>works</p>
+                                
+                                    
+                                    </>
+                            )})
+                : <p>works</p>
 
 
 
                     }
-                </div>
             </div>
+        </div >
         </>
     )
 }

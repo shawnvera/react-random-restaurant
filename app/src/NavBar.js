@@ -3,9 +3,9 @@ import React from "react";
 export default function NavBar(props) {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary text-center">
                 <div className="container-fluid">
-                <a className="navbar-brand text-center" href="./index.js">Lex.Eat.with(friends)</a>
+            
                   
                   
                     <div className="collapse navbar-collapse" id="navbarNav">
