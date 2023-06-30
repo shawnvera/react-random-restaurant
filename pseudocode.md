@@ -43,7 +43,7 @@ BEGIN
 
 State:
 
-1. User's cart
+1. User's cart - when user clicks the button on the card it adds count to state.
 2. Current menu section displayed
 
 

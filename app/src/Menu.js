@@ -1,169 +1,56 @@
 import React, { useState, useEffect } from "react";
 import getData from "./data.js";
 
-export default function Menu() {
+export default function Menu(props) {
 
 
-    const [menu, setMenu] = useState("");
+    const [menu, setMenu] = useState([]);
+    let menuArr = Object.entries(menu);
 
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await getData();
+            setMenu(data);
+        }
+        fetchData();
+        return () => {
 
-    function handleClick() { }
+        }
+    }, [])
+
+    function handleClick() {
+      
+    }
 
 
     return (
         <>
             <div className="container-fluid">
+                <div className="row">
 
-                <div className="row-4">
-                    <div className="col">
 
-                        <div className="card">
-                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">{menu.includes}</p>
-                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
 
-                        <div className="card">
-                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">{menu.includes}</p>
-                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">{menu.includes}</p>
-                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">{menu.includes}</p>
-                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                            <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <p className="card-text">{menu.includes}</p>
-                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col">
-
-                                <div className="card">
-                                    <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="..." />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">{menu.includes}</p>
-                                        <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                                </div>
-                                </div>
-
-                                <div className="card">
-                                    <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">{menu.includes}</p>
-                                        <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-
-                                <div className="card">
-                                    <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">{menu.includes}</p>
-                                        <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-
-                                <div className="card">
-                                    <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">{menu.includes}</p>
-                                        <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-
-                                <div className="card">
-                                    <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                    <div className="card-body">
-                                        <h5 className="card-title">Card title</h5>
-                                        <p className="card-text">{menu.includes}</p>
-                                        <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-
-                                <div className="row">
-                                    <div className="col">
-
-                                        <div className="card">
-                                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                            <div className="card-body">
-                                                <h5 className="card-title">Card title</h5>
-                                                <p className="card-text">{menu.includes}</p>
-                                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                            </div>
+                    {
+                        menu.length > 0 ?
+                            menu.map((item, index) => {
+                                return (
+                                    <>
+                                        <div className="col-xs-4">
+                                            <h5 className="card-title">{item.title} ${item.price}</h5>
+                                            <p className="card-text">{item.description}</p>
+                                            <button onClick={handleClick} className="btn btn-primary">Add to cart</button>
                                         </div>
-                                        </div>
-                                        </div>
+                                
+                                    
+                                    </>
+                            )})
+                : <p>works</p>
 
-                                        <div className="card">
-                                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                            <div className="card-body">
-                                                <h5 className="card-title">Card title</h5>
-                                                <p className="card-text">{menu.includes}</p>
-                                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                        </div>
 
-                                        <div className="card">
-                                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                            <div className="card-body">
-                                                <h5 className="card-title">Card title</h5>
-                                                <p className="card-text">{menu.includes}</p>
-                                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                        </div>
 
-                                        <div className="card">
-                                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                            <div className="card-body">
-                                                <h5 className="card-title">Card title</h5>
-                                                <p className="card-text">{menu.includes}</p>
-                                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                        </div>
-
-                                        <div className="card">
-                                            <img height="100" width="125" src="https://cdn.pixabay.com/photo/2017/11/11/20/19/dinner-table-2940339_1280.png" className="card-img-top" alt="friends at a dinner table on their phones" />
-                                            <div className="card-body">
-                                                <h5 className="card-title">Card title</h5>
-                                                <p className="card-text">{menu.includes}</p>
-                                                <a href={handleClick} className="btn btn-primary">Go somewhere</a>
-                                            </div>
-                                        </div>
-
-                                    </div></div></div>
-
-                        </>
-                        )
+                    }
+            </div>
+        </div >
+        </>
+    )
 }
